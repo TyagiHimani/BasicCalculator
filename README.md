@@ -1,4 +1,4 @@
-# ✊🖐✌ Rock Paper Scissors - Interactive Game
+# 🧮 Simple Calculator
 
 **Author:** Himani Tyagi  
 **Internship Project Submission**
@@ -7,68 +7,64 @@
 
 ## 📌 Description
 
-This is a terminal-based **Rock Paper Scissors game** written in Python. It allows a player to enter their name, play multiple rounds against the computer, view live scores, and optionally save their final score to a text file. The game includes basic input validation, randomization for computer moves, and simple interactivity with time delays.
+This is a basic console-based calculator developed in Python that performs fundamental arithmetic operations: addition, subtraction, multiplication, and division. It takes user input, handles invalid entries gracefully, and supports continuous calculation until the user decides to exit.
 
 ---
 
 ## 💡 Features
 
-- 🎮 Interactive CLI gameplay with name personalization
-- 🔁 Multiple rounds with option to replay or exit
-- 📊 Scoreboard displayed on request
-- 🧠 Computer plays with random logic (non-repeating same move)
-- 💾 Option to **save your score** to a text file (`scoreboard.txt`)
-- ⚠️ Handles invalid inputs and prevents common bugs (e.g. same choices)
+- ✅ Supports four basic operations: `+`, `-`, `*`, `/`
+- ✅ Accepts both number-based (`1/2/3/4`) and symbol-based input (`+/-/*//`)
+- ✅ Handles invalid numeric input using `try-except`
+- ✅ Checks for division by zero with appropriate error message
+- ✅ User-friendly interface with looped operations until exit
+- ✅ Includes short time delays for better interaction experience
 
 ---
 
 ## ⚙️ Technologies Used
 
-- **Python 3**
-- `random` module – for generating computer choices
-- `time` module – for delay and smooth user experience
-- `file handling` – to store scores persistently
+- Python 3
+- `time` module for creating simple delays
+- CLI (Command Line Interface)
 
 ---
 
 ## 🧠 Code Structure
 
-| File            | Purpose                              |
-|------------------|--------------------------------------|
-| `rps_game.py`    | Main script to run the full game     |
-| `scoreboard.txt` | (Optional) Stores saved scores       |
+| File        | Purpose |
+|-------------|---------|
+| `calculator.py` | Main script containing all functions and logic |
 
-### Key Components:
+**Functions Explained:**
 
-- `name = input(...)` – Gets user’s name at the beginning
-- `while True:` – Loops the game for multiple rounds
-- `random.randint(1, 3)` – Generates computer move
-- `if result == 'player'` – Increases score accordingly
-- `open('scoreboard.txt', 'a')` – Appends the final score if user chooses to save
+- `add(x, y)` – Returns the sum of `x` and `y`
+- `subtract(x, y)` – Returns the difference of `x` and `y`
+- `multiply(x, y)` – Returns the product of `x` and `y`
+- `divide(x, y)` – Returns the quotient; checks for division by zero
+- `calculator()` – Handles UI, user input, function calls, and error handling
 
 ---
 
 ## 🧪 How to Run
 
-1. Make sure you have **Python 3 installed**.
-2. Save the file as `rps_game.py`
-3. Open terminal and run:
+1. Make sure Python 3 is installed on your system.
+2. Clone the repository or download the file.
+3. Run the script in terminal or any Python IDE:
 
 ```bash
-python rps_game.py
+python calculator.py
+🚀 Future Improvements
+Add support for exponentiation and modulus
+
+GUI-based version using Tkinter or PyQt
+
+Store calculation history
+
+Unit testing for each function
 
 🙋‍♀️ My Contribution
-This project was created from scratch by me as a part of my internship learning experience. It helped me strengthen core Python skills such as:
-
-Control flow
-
-Functions and logic
-
-File handling
-
-Randomization
-
-User interaction via CLI
+As part of my internship, I independently developed this calculator to strengthen my Python fundamentals. I applied function decomposition, input validation, and loop control, while ensuring user-friendly interaction.
 
 📄 License
-This project is free to use under the MIT License.
+This project is licensed under the MIT License.
